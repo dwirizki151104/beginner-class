@@ -89,7 +89,7 @@ body {
   border-radius: 0;
   box-shadow: 0 4px 24px rgba(74,107,255,0.08);
   margin: 0;
-  margin-top: 230rem;
+  margin-top: 430rem;
   padding-top: 500px; /* Ganti margin-top dengan padding-top agar konten hero tidak tertimbun header */
 }
 
@@ -153,56 +153,62 @@ body {
   }
 }
 
-.pricing-section {
-    margin-top: 20px;
-    text-align: center;
+.text-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.pricing-title {
-    color: #2a3f5f;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+.description-text {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #444;
 }
 
-.original-price {
-    font-size: 1.2rem;
-    color: #6b7280;
-    margin-bottom: 15px;
-    text-decoration: line-through;
+.closing-text {
+  font-size: 17px;
+  margin-top: 25px;
+  color: #444;
+  font-style: italic;
 }
 
-.not-price {
-    color: #ef4444;
-    margin-left: 8px;
-    font-size: 0.9rem;
+.consult-button {
+  background-color: #25D366; /* WhatsApp green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
+  gap: 10px;
 }
 
-.promo-options {
-    margin: 20px 0;
-    text-align: left;
+.consult-button:hover {
+  background-color: #128C7E; /* Darker WhatsApp green */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(37, 211, 102, 0.4);
 }
 
-.promo-option {
-    margin-bottom: 12px;
-    padding: 8px 12px;
-    background: #f8fafc;
-    border-radius: 8px;
+.consult-button:active {
+  transform: translateY(0);
 }
 
-.promo-option.selected {
-    background: #e6edff;
-    border-left: 3px solid #4a6cf7;
-    font-weight: 600;
-    color: #2a3f5f;
-}
-
-.group-discounts {
-    margin-top: 10px;
-    padding-left: 20px;
-    font-size: 0.9rem;
-    color: #4b5563;
-}
-
-.group-discounts div {
-    margin-bottom: 6px;
+.whatsapp-icon {
+  font-size: 20px;
 }

@@ -1,46 +1,23 @@
 import React from 'react';
-import '../App.css'
 
 const features = [
     {
-    title: 'Beginner Class',
-    description: (
-        <div className="feature-description">
-            <div className="info-item">
-                <span className="info-label">Date:</span> 8 AGUSTUS 2025
-            </div>
-            <div className="info-item">
-                <span className="info-label">Time:</span> 09.00 - 17.00 WIB
-            </div>
-            <div className="info-item">
-                <span className="info-label">Location:</span> YOGYAKARTA
-            </div>
-            
-            <div className="pricing-section">
-                <h4 className="pricing-title">Jadi Berapa Investasi Daftar Beginner Class?</h4>
-                <div className="original-price">
-                    Rp 1.500.000 ?  
-                    <span className="not-price">BUKAN ✕</span>
+        title: 'Beginner Class',
+        description: (
+            <div className="feature-description">
+                <div className="info-item">
+                    <span className="info-label">Date:</span> 8 AGUSTUS 2025
                 </div>
-                
-                <div className="promo-options">
-                    <div className="promo-option">
-                        <input type="checkbox" id="early-bird" disabled />
-                        <label htmlFor="early-bird">PROMO EARLY BIRD (LAUNCHING) </label>
-                    </div>
-                    <div className="promo-option selected">
-                        <strong>Rp 1 Juta saja</strong>
-                    </div>
-                    <div className="group-discounts">
-                        <div>2 Tiket: @Rp 950 rb</div>
-                        <div>3 Tiket: @Rp 900 rb</div>
-                    </div>
+                <div className="info-item">
+                    <span className="info-label">Time:</span> 09.00 - 17.00 WIB
+                </div>
+                <div className="info-item">
+                    <span className="info-label">Location:</span> YOGYAKARTA
                 </div>
             </div>
-        </div>
-    ),
-    icon: '📅',
-    size: 'small'
+        ),
+        icon: '📅',
+        size: 'small'
     },
     {
         title: 'Meta Ads For Beginner',
@@ -70,7 +47,7 @@ const features = [
             </ol>
         ),
         icon: '🎁',
-        size: 'small'
+        size: 'wide'  // Changed from 'small' to 'wide'
     },
 ];
 
@@ -103,6 +80,24 @@ const Features = () => {
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
+            ':hover': {
+                transform: 'translateY(-5px)',
+                boxShadow: '0 15px 35px rgba(0, 0, 0, 0.12)'
+            }
+        },
+        wideCard: {
+            background: '#fff',
+            borderRadius: '16px',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
+            padding: '30px 25px',
+            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            boxSizing: 'border-box',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            gridColumn: '1 / -1',  // This will make the card span all columns
+            maxWidth: '100%',
             ':hover': {
                 transform: 'translateY(-5px)',
                 boxShadow: '0 15px 35px rgba(0, 0, 0, 0.12)'
@@ -145,10 +140,14 @@ const Features = () => {
                     {features.map((feature, idx) => (
                         <div 
                             key={idx} 
-                            style={{
-                                ...styles.featureCard,
-                                padding: feature.size === 'small' ? '30px 25px' : '40px 30px'
-                            }}
+                            style={
+                                feature.size === 'wide' 
+                                    ? styles.wideCard 
+                                    : {
+                                        ...styles.featureCard,
+                                        padding: feature.size === 'small' ? '30px 25px' : '40px 30px'
+                                    }
+                            }
                         >
                             <div style={styles.iconContainer}>
                                 {feature.icon}
@@ -275,6 +274,17 @@ const Features = () => {
                     height: 3px;
                     background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%);
                     border-radius: 3px;
+                }
+
+                /* Responsive adjustments */
+                @media (min-width: 768px) {
+                    .features .grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    
+                    .features .wide-card {
+                        grid-column: span 2;
+                    }
                 }
             `}</style>
         </section>

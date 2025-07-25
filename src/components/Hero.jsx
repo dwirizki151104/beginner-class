@@ -21,13 +21,13 @@ export default function Hero() {
             BELAJAR FACEBOOK ADS NGGAK HARUS RIBET DAN MAHAL
           </h1>
         </div>
-        <p style={{ color: '#ffffffff' }}>
+        <p style={{ color: '#000000ff' }}>
           <b>Bahkan kamu yang gaptek sekalipun bisa mulai dari nol dan langsung praktek</b>
         </p>
-        <p style={{ color: '#000000ff' }}>
+        <p style={{ color: '#ffffffff' }}>
         Kamu baru mulai jualan online tapi bingung gimana caranya biar produkmu dilirik banyak orang? Jangan khawatir—pelatihan ini dirancang khusus untuk pemula yang belum pernah ngiklan sekalipun.
         </p>
-        <p style={{ color: '#000000ff' }}> 
+        <p style={{ color: '#ffffffff' }}> 
         Di sini kamu akan belajar dasar-dasar Facebook & Instagram Ads dengan bahasa yang mudah dipahami, langsung praktek, dan bisa dipakai untuk jualanmu sendiri.  
         Nggak perlu jago teknis, yang penting mau belajar dan eksekusi. Yuk, mulai perjalanan iklan pertamamu hari ini!
         </p>

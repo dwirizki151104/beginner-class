@@ -216,40 +216,199 @@ const WorkshopSection = () => {
         </p>
       </div>
 
-      {/* CTA Section */}
+      {/* Enhanced Pricing Section */}
       <div style={{
         textAlign: 'center',
-        padding: '40px 20px 60px',
-        marginTop: '0'
+        margin: '40px auto',
+        padding: '40px 30px',
+        background: 'linear-gradient(to bottom, #ffffff, #f8fbff)',
+        borderRadius: '16px',
+        boxShadow: '0 10px 30px rgba(0, 102, 204, 0.15)',
+        maxWidth: '650px',
+        border: '1px solid rgba(0, 102, 204, 0.1)',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
-        <button 
-          onClick={contactWhatsApp}
-          style={{
-            background: 'linear-gradient(135deg, #0066cc, #4da6ff)',
-            color: 'white',
-            border: 'none',
-            padding: '15px 35px',
-            fontSize: '1.1rem',
-            fontWeight: 600,
-            borderRadius: '50px',
-            cursor: 'pointer',
-            boxShadow: '0 10px 25px rgba(0, 102, 204, 0.3)',
-            transition: 'all 0.3s ease',
-            ':hover': {
-              transform: 'translateY(-3px)',
-              boxShadow: '0 15px 30px rgba(0, 102, 204, 0.4)'
-            }
-          }}
-        >
-          Daftar Sekarang via WhatsApp
-        </button>
-        <p style={{
-          marginTop: '20px',
-          color: '#666',
-          fontSize: '1rem'
+        {/* Decorative elements */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '80px',
+          height: '80px',
+          background: 'rgba(0, 102, 204, 0.05)',
+          borderRadius: '0 0 0 100%'
+        }}></div>
+        
+        <div style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '60px',
+          height: '60px',
+          background: 'rgba(255, 68, 68, 0.05)',
+          borderRadius: '0 100% 0 0'
+        }}></div>
+
+        <h3 style={{
+          color: '#0066cc',
+          fontSize: '1.8rem',
+          marginBottom: '25px',
+          fontWeight: '700',
+          position: 'relative',
+          zIndex: 1
         }}>
-          Klik tombol di atas untuk langsung terhubung dengan tim kami di WhatsApp
-        </p>
+          Jadi Berapa Investasi Daftar Beginner Class?
+        </h3>
+        
+        <div style={{
+          position: 'relative',
+          marginBottom: '20px',
+          padding: '15px 0'
+        }}>
+          <div style={{
+            fontSize: '1.6rem',
+            fontWeight: 'bold',
+            color: '#999',
+            marginBottom: '5px',
+            textDecoration: 'line-through',
+            position: 'relative',
+            display: 'inline-block'
+          }}>
+            Rp 1.500.000
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '0',
+              width: '100%',
+              height: '2px',
+              background: '#ff4444',
+              transform: 'rotate(-5deg)'
+            }}></div>
+          </div>
+          
+          <div style={{
+            fontSize: '1.1rem',
+            fontWeight: 'bold',
+            color: '#ff4444',
+            background: 'rgba(255, 68, 68, 0.1)',
+            padding: '5px 15px',
+            borderRadius: '50px',
+            display: 'inline-block',
+            marginTop: '5px'
+          }}>
+            Bukan✕
+          </div>
+        </div>
+        
+        <div style={{
+          background: 'rgba(0, 102, 204, 0.1)',
+          padding: '15px',
+          borderRadius: '12px',
+          marginBottom: '25px',
+          position: 'relative'
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '10px',
+            marginBottom: '10px'
+          }}>
+            <div style={{
+              width: '24px',
+              height: '24px',
+              background: '#0066cc',
+              borderRadius: '6px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              fontSize: '14px'
+            }}>
+              ✓
+            </div>
+            <span style={{
+              fontWeight: '600',
+              color: '#0066cc',
+              fontSize: '1.1rem'
+            }}>PROMO EARLY BIRD (LAUNCHING)</span>
+          </div>
+          
+          <div style={{
+            fontSize: '2.2rem',
+            fontWeight: '800',
+            color: '#0066cc',
+            margin: '15px 0',
+            textShadow: '0 2px 5px rgba(0, 102, 204, 0.1)'
+          }}>
+            Rp 1 Juta saja
+          </div>
+          
+          <div style={{
+            fontSize: '0.9rem',
+            color: '#666',
+            fontStyle: 'italic'
+          }}>
+          </div>
+        </div>
+        
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '40px',
+          flexWrap: 'wrap',
+          marginTop: '30px'
+        }}>
+          <div style={{
+            background: 'rgba(0, 102, 204, 0.05)',
+            padding: '15px 25px',
+            borderRadius: '12px',
+            minWidth: '150px'
+          }}>
+            <div style={{ 
+              fontSize: '1rem',
+              marginBottom: '8px',
+              color: '#555'
+            }}>2 Tiket:</div>
+            <div style={{ 
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              color: '#0066cc'
+            }}>@Rp 950 rb</div>
+            <div style={{
+              fontSize: '0.8rem',
+              color: '#ff4444',
+              marginTop: '5px',
+              fontWeight: '600'
+            }}>Hemat Rp50 rb/tiket</div>
+          </div>
+          
+          <div style={{
+            background: 'rgba(0, 102, 204, 0.1)',
+            padding: '15px 25px',
+            borderRadius: '12px',
+            minWidth: '150px',
+            border: '2px solid rgba(0, 102, 204, 0.2)'
+          }}>
+            <div style={{ 
+              fontSize: '1rem',
+              marginBottom: '8px',
+              color: '#555'
+            }}>3 Tiket:</div>
+            <div style={{ 
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              color: '#0066cc'
+            }}>@Rp 900 rb</div>
+            <div style={{
+              fontSize: '0.8rem',
+              color: '#ff4444',
+              marginTop: '5px',
+              fontWeight: '600'
+            }}>Hemat Rp 200 rb/tiket</div>
+          </div>
+        </div>
       </div>
     </div>
   );

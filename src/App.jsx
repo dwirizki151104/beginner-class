@@ -7,6 +7,8 @@ import { Footer } from './components/Footer'
 import { TargetAudience } from './components/TargetAudience'
 import WorkshopSection from './components/WorkshopSection'
 import { Galeri } from './components/Galeri'
+import AdCalculator from './components/AdCalcuator.jsx'
+import TextComponent from './components/TextComponent'
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
         <Features />
       </div>'
       <TargetAudience />
+      <AdCalculator />
       <WorkshopSection />
       <div className='galeri'>
+      <TextComponent />
         <Galeri />
       </div>
       <Footer />
