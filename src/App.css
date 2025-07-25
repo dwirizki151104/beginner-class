@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #f8f9fa;
 }
@@ -13,9 +22,10 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0 0;
+  width: 100vw;
+  max-width: none;
 }
 
 /* Header styles akan di-import dari komponen */
@@ -24,8 +34,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 1rem 5vw;
   border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+  height: 80px; /* Tambahkan tinggi header */
 }
 
 .logo {
@@ -42,20 +57,40 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #1E90FF;
   transition: color 0.3s;
+  font-size: 1.2rem; /* Tambahkan ini untuk memperbesar tulisan */
 }
 
 .nav-links a:hover {
   color: #4a6bff;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 2vw;
+  }
+}
+
+
 .hero {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 0;
+  padding: 60px 5vw;
   gap: 40px;
+  width: 100vw;
+  min-height: 80vh;
+  box-sizing: border-box;
+  background: linear-gradient(to top, #00ADFF);
+  border-radius: 0;
+  box-shadow: 0 4px 24px rgba(74,107,255,0.08);
+  margin: 0;
+  margin-top: 230rem;
+  padding-top: 500px; /* Ganti margin-top dengan padding-top agar konten hero tidak tertimbun header */
 }
 
 .hero-content {
@@ -77,16 +112,22 @@ body {
 .hero-image {
   flex: 1;
   text-align: center;
+  min-width: 350px; /* Tambahan agar kolom kanan tidak collapse */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px; /* Perbesar gambar */
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button {
-  background-color: #4a6bff;
+  background-color: #00ADFF;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -98,4 +139,70 @@ body {
 
 .cta-button:hover {
   background-color: #3a5bef;
+}
+
+.logo img {
+  width: 150px; /* Atur lebar logo sesuai kebutuhan */
+  height: auto;
+}
+
+@media (max-width: 400px) {
+  .hero, .hero-content, .hero-image {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.pricing-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pricing-title {
+    color: #2a3f5f;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.original-price {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+    text-decoration: line-through;
+}
+
+.not-price {
+    color: #ef4444;
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+.promo-options {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.promo-option {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.promo-option.selected {
+    background: #e6edff;
+    border-left: 3px solid #4a6cf7;
+    font-weight: 600;
+    color: #2a3f5f;
+}
+
+.group-discounts {
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.group-discounts div {
+    margin-bottom: 6px;
 }
