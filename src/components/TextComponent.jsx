@@ -5,7 +5,7 @@ const TextComponent = () => {
   const handleWhatsAppClick = () => {
     // Replace with your actual WhatsApp number (remove all non-digit characters)
     const phoneNumber = '6281353025302'; 
-    const message = '';
+    const message = 'hai kak saya ingin konsultasi mengenai jasa Private Mentoring yang ditawarkan di website ini.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
