@@ -22,9 +22,8 @@ export default function Header() {
       </div>
       <nav>
         <ul className="nav-links">
-          <li><a href="#contact">Tentang</a></li>
-          <li><a onClick={ScrolltoGalery}>Galeri</a></li>
           <li><a onClick={Scrolltofeatures} >Jadwal</a></li>
+          <li><a onClick={ScrolltoGalery}>Galeri</a></li>
         </ul>
       </nav>
     </header>
